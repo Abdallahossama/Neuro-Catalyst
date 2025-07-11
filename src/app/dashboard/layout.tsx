@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <div className="flex items-center gap-2 px-4">
+        <div className="flex items-center gap-2 px-5 py-1 border-b">
           <SidebarTrigger className="-ml-1" />
           <Separator
             orientation="vertical"
@@ -19,7 +19,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           />
           <ModeToggle />
         </div>
-        {children}
+        <div className="container mx-auto flex flex-col h-screen gap-5 items-center w-[95%]  py-5">
+          {children}
+        </div>
       </SidebarInset>
     </SidebarProvider>
   );

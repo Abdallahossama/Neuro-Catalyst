@@ -15,8 +15,8 @@ import {
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
+// import { NavProjects } from "@/components/nav-projects"
+// import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
@@ -29,8 +29,7 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Abdullah Osama",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
@@ -52,7 +51,7 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Habit Tracker",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
@@ -72,7 +71,7 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Recovery Tracker",
       url: "#",
       icon: Bot,
       items: [
@@ -91,7 +90,7 @@ const data = {
       ],
     },
     {
-      title: "Documentation",
+      title: "Time Tracker",
       url: "#",
       icon: BookOpen,
       items: [
@@ -114,7 +113,7 @@ const data = {
       ],
     },
     {
-      title: "Settings",
+      title: "Azkar",
       url: "#",
       icon: Settings2,
       items: [
@@ -154,7 +153,7 @@ const data = {
       icon: Map,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -164,11 +163,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   )
