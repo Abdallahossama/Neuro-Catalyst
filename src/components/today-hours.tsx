@@ -29,21 +29,20 @@ import {
 export const description = "A bar chart with a custom label";
 
 const chartData = [
-  { month: "gym", desktop: 50 },
-  { month: "study", desktop: 305 },
-  { month: "work", desktop: 237 },
-  { month: "cooking", desktop: 100 }, // Added more data for demonstration
-  { month: "cooking", desktop: 100 }, // Added more data for demonstration
-  { month: "cooking", desktop: 100 }, // Added more data for demonstration
+  { month: "gym", Totalhours: 50 },
+  { month: "study", Totalhours: 305 },
+  { month: "work", Totalhours: 237 },
+  { month: "cooking", Totalhours: 100 }, // Added more data for demonstration
+  { month: "cooking", Totalhours: 100 }, // Added more data for demonstration
+  { month: "cooking", Totalhours: 100 }, // Added more data for demonstration
 ];
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
     color: "var(--chart-2)",
   },
   label: {
-    color: "var(--background)",
+    color: "var(--primary)",
   },
 } satisfies ChartConfig;
 
@@ -89,26 +88,26 @@ export default function TodayHours() {
               tickFormatter={(value) => value.slice(0, 3)}
               hide
             />
-            <XAxis dataKey="desktop" type="number" hide />
+            <XAxis dataKey="Totalhours" type="number" hide />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator="line" />}
             />
             <Bar
-              dataKey="desktop"
+              dataKey="Totalhours"
               layout="vertical"
-              fill="var(--color-desktop)"
+              fill="var(--primary)"
               radius={4}
             >
               <LabelList
                 dataKey="month"
                 position="insideLeft"
                 offset={8}
-                className="fill-[--color-label]"
+                className="fill-gray-800"
                 fontSize={14}
               />
               <LabelList
-                dataKey="desktop"
+                dataKey="Totalhours"
                 position="right"
                 offset={8}
                 className="fill-foreground"

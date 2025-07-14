@@ -60,8 +60,8 @@ const Page = () => {
   return (
     <div className="flex flex-col  items-center justify-start w-full h-screen gap-10  pb-5">
       {/* Timer Section */}
-      <div className="flex flex-col gap-5 items-center justify-start w-full h-[40%]">
-        <Card className="w-[500px] mx-auto">
+      <div className="flex flex-col gap-5 items-center justify-start w-[100%] h-[40%]">
+        <Card className="md:max-w-[500px] w-[100%] mx-auto">
           <div className="flex mx-auto gap-5 items-center justify-center ">
             <Button
               variant={"default"}
@@ -78,7 +78,7 @@ const Page = () => {
               Stopwatch
             </Button>
           </div>
-          <CardContent className="flex items-center flex-col gap-2 justify-center rounded-2xl w-[500px] px-5 py-2 mx-auto ">
+          <CardContent className="flex items-center flex-col gap-2 justify-center rounded-2xl md:w-[500px] px-5 py-2 mx-auto ">
             <div className="grid grid-cols-5 items-center w-full ">
               <div className="col-span-2"></div>
               <CardTitle className="col-span-1 text-center font-semibold text-lg py-1">
